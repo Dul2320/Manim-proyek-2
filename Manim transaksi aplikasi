@@ -1,0 +1,18 @@
+from manim import *
+
+class TransaksiBerhasil(Scene):
+    def construct(self):
+        teks = Text("TransaksiBerhasil", color=PURPLE)
+        kotak = Square(side_length=2, color=PURPLE)
+        lingkaran = Circle(radius=4, color=RED)
+
+        # Posisi awal kotak
+        self.play(Create(kotak))
+        self.wait(4)
+
+        # Transformasi kotak menjadi lingkaran
+        self.play(Transform(kotak,Square))
+        self.wait(4)
+        self.play(Write(teks))
+        self.wait(4)
+        
